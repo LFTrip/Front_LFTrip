@@ -36,8 +36,10 @@ class SignInFormBase extends Component {
 			.then(() => {
 				this.setState({ ...INITIAL_STATE });
 				this.props.history.push(ROUTES.HOME);
+				console.log("ok")
 			})
 			.catch(error => {
+				console.log("ok")
 				this.setState({ error });
 			});
 

@@ -7,20 +7,28 @@ export default class BackConnexion{
     }
 
     dosignWithEmailAndPassword = (data, uri) =>{
-        axios.post(
-            conf["url"]+conf["path"][uri],
+        data.email = "feige@gmail.com";
+        data.password = "password";
+        
+        return new Promise((resolve, reject) => { resolve(axios.post(
+           "http://localhost:8081/login",
             {
-                Data : data
-            }.then(response=> {
+                "email": data.email,
+                "password" : data.password
+            }).then(response=> {
+
                 if(response.status === 200){
-                    localStorage.setItem('authUser', response.data['user'])
+                    console.log(response.data)
+                    data = {
+                        token : response.data
+                    }
+                     localStorage.setItem('authUser',  JSON.stringify(data)  )
                 }else{
-                    return null;
+                    ///reject( console.log(response.data));
                 }
             }).catch(error =>{
-                console.log(error);
-            })
-        )
+                reject( console.log(error));
+            })) });
     }
 
     onlogOut = data =>{
