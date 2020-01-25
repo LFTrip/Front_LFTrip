@@ -5,10 +5,16 @@ import { withBackaccessContext } from '../../BackEnd';
 import * as ROUTES from '../../../const/routes';
 
 const PasswordForgetPage = () => (
-	<div>
-		<h1>PasswordForget</h1>
-		<PasswordForgetForm />
-	</div>
+	<section id="user-profile">
+		<div class="container">
+			<div class="row">
+					<div class="section-title line-style">	
+						<h3 class="title">Password Forget</h3>
+					</div>
+					<PasswordForgetForm />
+			</div>
+		</div>
+	</section>
 );
 
 const INITIAL_STATE = {
@@ -44,23 +50,14 @@ class PasswordForgetFormBase extends Component {
 
 	render() {
 		const { email, error } = this.state;
-
-		const isInvalid = email === '';
-
 		return (
-			<form onSubmit={this.onSubmit}>
-				<input
-					name="email"
-					value={this.state.email}
-					onChange={this.onChange}
-					type="text"
-					placeholder="Email Address"
-				/>
-				<button disabled={isInvalid} type="submit">
-					Reset My Password
-				</button>
-
-				{error && <p>{error.message}</p>}
+			<form onSubmit={this.onSubmit} class="grey-box">
+				<span class="text">
+					Password Forget				
+				</span>
+				<input value={email} onChange={this.onChange} type="password" class="form-control" id="email" name="email" placeholder="Email Address"/>
+				<button type="submit" class="btn btn-default">Reset My Password</button>	
+				{error && <p>{error.message}</p>}							
 			</form>
 		);
 	}

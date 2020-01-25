@@ -24,7 +24,7 @@ nav ul ul {
 nav > ul ul li a {
   border-bottom-color: #4E4E4E;
 }
-nav > ul li.has_submenu > ul li.has_submenu > a::after {
+/*nav > ul li.has_submenu > ul li.has_submenu > a::after {
   background: url(../../../images/mini-arrow-menu.png) no-repeat scroll right top transparent;
 }
 nav > ul > li.has_submenu > a::after {
@@ -32,7 +32,7 @@ nav > ul > li.has_submenu > a::after {
   height: 15px;
   top: 17px;
   width: 20px;
-}
+}*/
 #header-page .skyline {
   background-color: #555;
 }

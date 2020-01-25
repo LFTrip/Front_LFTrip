@@ -11,8 +11,8 @@
 input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
 input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
 
-/* Hide original checkboxes. They are ugly! */
-input.labelauty { display: none !important; }
+/* Hide original checkboxes. They are ugly! 
+input.labelauty { display: none !important; }*/
 
 /*
  * Let's style the input

@@ -5,42 +5,33 @@ import HomePage from '../Home';
 import SignUpPage from '../Sign/SignUp';
 import SignInPage from '../Sign/SignIn';
 import LandingPage from '../Landing';
+import AccountPage from '../Account';
 import Header from '../Header';
-import {Link } from 'react-router-dom';
+import PasswordForgetPage from '../Password/PasswordForget';
 
 import * as ROUTES from '../../const/routes';
 import { withAuthentification } from '../Session';
-
+import {Triplist, Createtrip,TripDetail} from '../Trip'
 const App = () => (
-	<Router>
 		<div id="page-container">
-			<Header />
-			<section id="error-page" class="fixed-no-header">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<span class="title"><span>4<img src="/images/broken-pin.png" alt="" />1</span> Error!</span>
-							<h2 class="line-broken">Authentication Failed!</h2>
-							<div class="text">
-								The URL you've requested,  requires a correct username and password.<br />
-								Either you entered an incorrect username/password, or your browser doesn't support this feature.<br /> 
-								Please inform the administrator, if you think this was a mistake.
-							</div>
-							<Link className="btn btn-default error-button" to={ROUTES.SIGN_UP}>Report broken link</Link>
-							<Link className="btn btn-default error-button" to={ROUTES.HOME}>Visit the Home Pagen</Link>
-						</div>
-					</div>
+			<Router>
+				<Header />
+				<section id="header-page" class="header-margin-base">
+				</section>
+				
+				<div>
+					<Route exact path={ROUTES.LANDING} component={LandingPage} />
+					<Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+					<Route path={ROUTES.HOME} component={HomePage} />
+					<Route path={ROUTES.SIGN_IN} component={SignInPage} />
+					<Route path={ROUTES.ACCOUNT} component={AccountPage} />
+					<Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+					<Route path={ROUTES.TRIP} component={Triplist} />
+					<Route path={ROUTES.TRIPDETAIL} component={TripDetail} />
+					<Route path={ROUTES.CREATE_TRIP} component={Createtrip} />
 				</div>
-			</section>
-			<hr />
-			<div  className="container">
-        		<Route  exact path={ROUTES.LANDING} component={LandingPage} />
-				<Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-				<Route path={ROUTES.HOME} component={HomePage} />
-				<Route path={ROUTES.SIGN_IN} component={SignInPage} />
-			</div>
+			</Router>
 		</div>
-	</Router>
 );
 
 

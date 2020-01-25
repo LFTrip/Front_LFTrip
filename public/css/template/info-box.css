@@ -354,10 +354,12 @@
 ================================== */
 .box-ads.box-home {
   margin: 0 0 30px;
+  display: block !important;
 }
 .box-ads.box-home .image {
   height: 250px;
   width: 100%;
+  display: block !important;
 }
 /* BOX LIST
 ================================== */
@@ -508,11 +510,7 @@
 .box-ads.box-grid {
   /* &.mini */
 }
-.box-ads.box-grid.mini .address,
-.box-ads.box-grid.mini .detail,
-.box-ads.box-grid.mini .description {
-  display: none !important;
-}
+
 .box-ads.box-grid.mini .image {
   height: 160px;
 }

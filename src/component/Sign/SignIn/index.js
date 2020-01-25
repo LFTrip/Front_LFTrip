@@ -8,12 +8,9 @@ import * as ROUTES from '../../../const/routes';
 import { PasswordForgetLink } from '../../Password/PasswordForget';
 
 	const SignInPage = () => (
-			<div >
-				<h1>SignIn</h1>
-				<SignInForm />
-				<PasswordForgetLink />
-				<SignUpLink />
-			</div>
+		<section id="login-page">
+			<SignInForm />
+		</section>
 	);
 
 const INITIAL_STATE = {
@@ -53,32 +50,51 @@ class SignInFormBase extends Component {
 	render() {
 		const { email, password, error } = this.state;
 
-		const isInvalid = password === '' || email === '';
 
 		return (
-			<form onSubmit={this.onSubmit}>
-				<label htmlFor="email"><b>Email</b>
-				<input
-					name="email"
-					value={email}
-					onChange={this.onChange}
-					type="text"
-					placeholder="Email Address"
-				/></label>
-				<label htmlFor="password"><b>Password</b>
-				<input
-					name="password"
-					value={password}
-					onChange={this.onChange}
-					type="password"
-					placeholder="Password"
-				/></label>
-				<button className="registerbtn" disabled={isInvalid} type="submit">
-					Sign In
-				</button>
-
-				{error && <p>{error.message}</p>}
-			</form>
+			<div class="container">
+				<div className="row">
+					<div className="col-sm-7 col-sm-push-5 col-md-8 col-md-push-4">
+						<div className="text-desclaimer">
+							<h1>Welcome</h1>
+							<h3>to Trip</h3>
+							.<br />
+							<div class="bs-callout callout-info">
+								<h4>OK</h4>
+								<ul class="text">
+									<li>r</li>
+									<li></li>
+								</ul>
+							</div>
+							.
+						</div>
+					</div>
+					<div className="col-sm-5 col-sm-pull-7 col-md-4 col-md-pull-8">
+						<div className="box">
+							<h2 className="title">Login</h2>
+							<form onSubmit={this.onSubmit}>
+								<div className="field">
+									<input	name="email" value={email} onChange={this.onChange} class="form-control" type="text" placeholder="Email Address" />
+									<i className="fa fa-user user"></i>
+								</div>
+								<div className="field">
+									<input 	name="password" value={password} onChange={this.onChange} class="form-control"  type="password" placeholder="Password" />
+									<i className="fa fa-ellipsis-h"></i>
+								</div>
+								
+								<div className="field footer-form text-right">
+									<span className="remember"><input class="labelauty" type="checkbox" data-labelauty="Keep me signed in" checked/></span>
+									<button className="btn btn-default button-form"  type="submit">Login</button>
+								</div>		
+								{error && <p>{error.message}</p>}
+							</form>		
+							
+							<PasswordForgetLink />
+							<SignUpLink />		
+						</div>
+					</div>	
+				</div>
+			</div>
 		);
 	}
 }

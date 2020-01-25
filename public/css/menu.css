@@ -99,7 +99,7 @@ nav > ul ul li.has_submenu {
 nav > ul li.has_submenu a {
   padding-right: 36px;
   position: relative;
-}
+}/*
 nav > ul > li.has_submenu > a:after,
 nav > ul li.has_submenu > ul li.has_submenu > a:after {
   position: absolute !important;
@@ -117,7 +117,7 @@ nav > ul > li.has_submenu > a:after {
   height: 15px;
   top: 17px;
   width: 20px;
-}
+}*/
 nav > ul > li.has_submenu:hover > a:after {
   border-top-color: #FFF;
 }

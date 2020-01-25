@@ -3,10 +3,10 @@
 */
 /*
 	jQuery.mmenu oncanvas CSS
-*/
+
 .mm-hidden {
   display: none !important; }
-
+*/
 .mm-wrapper {
   overflow-x: hidden;
   position: relative; }
@@ -585,10 +585,10 @@ html.mm-opened.mm-dragging #mm-blocker {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  .mm-fixeddivider:after {
+  /*.mm-fixeddivider:after {
     content: none !important;
     display: none !important; }
-
+*/
 .mm-hasdividers .mm-fixeddivider {
   display: block; }
 
@@ -647,9 +647,9 @@ html.mm-opened.mm-dragging #mm-blocker {
   padding: 40px 0; }
 
 .mm-noresults .mm-noresultsmsg {
-  display: block; }
+  display: block; }/*
 .mm-noresults .mm-indexer {
-  display: none !important; }
+  display: none !important; }*/
 
 .mm-menu li.mm-nosubresults > a.mm-next {
   display: none; }
