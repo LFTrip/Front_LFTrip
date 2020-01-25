@@ -190,7 +190,7 @@ const HomePage = () => (
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<div class="box-ads box-home enlever" >
+						<div class="box-ajout box-home enlever" >
 							<a class="hover-effect image image-fill" href="property-detail.html">
 								<span class="cover"></span>
 								<img alt="Sample images" src="http://placehold.it/1240x745/bbbbbb/ffffff" />
@@ -211,7 +211,7 @@ const HomePage = () => (
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="box-ads box-home">
+						<div class="box-ajout box-home">
 							<a class="hover-effect image image-fill" href="property-detail.html">
 								<span class="cover"></span>
 								<img alt="Sample images" src="http://placehold.it/1240x745/bbbbbb/ffffff" />
@@ -232,7 +232,7 @@ const HomePage = () => (
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="box-ads box-home enlever" >
+						<div class="box-ajout box-home enlever" >
 							<a class="hover-effect image image-fill" href="property-detail.html">
 								<span class="cover"></span>
 								<img alt="Sample images" src="http://placehold.it/1240x745/bbbbbb/ffffff" />

@@ -326,7 +326,7 @@ export default class TripDetail extends Component{
                                 <h3 class="title">Other Property</h3>
                             </div>
 
-                            <div class="box-ads box-grid mini">
+                            <div class="box-ajout box-grid mini">
                                 <a class="hover-effect image image-fill" href="property-detail.html">
                                     <span class="cover"></span>
                                     <img alt="Sample images" src="http://placehold.it/1240x745/bbbbbb/ffffff" />
@@ -345,7 +345,7 @@ export default class TripDetail extends Component{
                                 </div>
                             </div>  
 
-                            <div class="box-ads box-grid mini">
+                            <div class="box-ajout box-grid mini">
                                 <a class="hover-effect image image-fill" href="property-detail.html">
                                     <span class="cover"></span>
                                     <img alt="Sample images" src="http://placehold.it/1240x745/bbbbbb/ffffff" />

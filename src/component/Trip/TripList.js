@@ -18,7 +18,7 @@ export default class Triplist extends Component{
                         <div class="col-sm-8 col-md-9">
                             <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -38,7 +38,7 @@ export default class Triplist extends Component{
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -58,7 +58,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -78,7 +78,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -98,7 +98,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -118,7 +118,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -138,7 +138,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -158,7 +158,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -178,7 +178,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/580/bbbbbb/ffffff" alt="Sample images" />
@@ -198,7 +198,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -218,7 +218,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
@@ -238,7 +238,7 @@ export default class Triplist extends Component{
                                     </div> 
                                 </div>  
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="box-ads box-grid">
+                                    <div class="box-ajout box-grid">
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />

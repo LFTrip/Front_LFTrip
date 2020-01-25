@@ -200,41 +200,41 @@
 /* .ads-maps */
 /* GENERIC BOX
 ================================== */
-.box-ads .title {
+.box-ajout .title {
   border-bottom-color: #e74c3c;
 }
-.box-ads .price {
+.box-ajout .price {
   background-color: #e74c3c;
   color: #ffffff;
 }
-.box-ads .price:after {
+.box-ajout .price:after {
   border-bottom-color: #e74c3c;
 }
-/* .box-ads */
+/* .box-ajout */
 /* BOX LIST
 ================================== */
-.box-ads {
+.box-ajout {
   /* &.box-list */
 }
-.box-ads.box-list .image:after {
+.box-ajout.box-list .image:after {
   border-left-color: #e74c3c;
 }
-/* .box-ads */
+/* .box-ajout */
 /* MINI BOX GRID
 ================================== */
-.box-ads {
+.box-ajout {
   /* &.box-grid */
 }
-.box-ads.box-grid {
+.box-ajout.box-grid {
   /* &.mini */
 }
-.box-ads.box-grid.mini .price {
+.box-ajout.box-grid.mini .price {
   border-top-color: #e74c3c;
 }
-.box-ads.box-grid.mini .price:after {
+.box-ajout.box-grid.mini .price:after {
   border-bottom-color: #e74c3c;
 }
-/* .box-ads */
+/* .box-ajout */
 /* SLIDE BOX HOME
 ================================== */
 .box-property-slide {

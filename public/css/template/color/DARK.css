@@ -117,45 +117,45 @@ fieldset[disabled] .form-control {
   border-color: #777;
 }
 /* ADS */
-.box-ads {
+.box-ajout {
   border-color: #555;
   background-color: #444;
 }
-.box-ads .title {
+.box-ajout .title {
   background-color: rgba(55, 55, 55, 0.96);
   color: #FFF;
 }
-.box-ads .description {
+.box-ajout .description {
   background-color: #454545;
   border-bottom-color: #888;
   border-top-color: #888;
 }
-.box-ads.box-grid .description {
+.box-ajout.box-grid .description {
   border-bottom: 16px solid #454545;
 }
-.box-ads .detail dt {
+.box-ajout .detail dt {
   background-image: url(../../../images/icon-ads.png);
 }
-.box-ads .detail dd,
-.box-ads .detail dt {
+.box-ajout .detail dd,
+.box-ajout .detail dt {
   border-bottom-color: #444;
 }
-.box-ads .detail dd span {
+.box-ajout .detail dd span {
   background-color: #404040;
   border-color: #555;
 }
-.box-ads.box-grid .detail,
-.box-ads.box-list {
+.box-ajout.box-grid .detail,
+.box-ajout.box-list {
   background-color: #444;
 }
-.box-ads.box-list .address,
-.box-ads.box-list .description,
-.box-ads.box-list .detail,
-.box-ads.box-list .detail dd,
-.box-ads.box-list .footer {
+.box-ajout.box-list .address,
+.box-ajout.box-list .description,
+.box-ajout.box-list .detail,
+.box-ajout.box-list .detail dd,
+.box-ajout.box-list .footer {
   border-color: #555;
 }
-.box-ads.box-grid.mini .price {
+.box-ajout.box-grid.mini .price {
   background-color: #444;
   border-right-color: #555;
   border-bottom-color: #555;

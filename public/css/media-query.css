@@ -304,24 +304,24 @@
   }
   /* PROPERTY CAROUSEL BOX
 	================================== */
-  .box-ads.box-list .image {
+  .box-ajout.box-list .image {
     height: 220px;
     left: 10px;
     top: 10px;
     right: 10px;
     width: auto;
   }
-  .box-ads.box-list .address {
+  .box-ajout.box-list .address {
     padding-top: 234px;
   }
-  .box-ads.box-list .address,
-  .box-ads.box-list .description,
-  .box-ads.box-list .detail,
-  .box-ads.box-list .footer {
+  .box-ajout.box-list .address,
+  .box-ajout.box-list .description,
+  .box-ajout.box-list .detail,
+  .box-ajout.box-list .footer {
     margin-left: 0;
     border-left: none;
   }
-  .box-ads.box-list .price {
+  .box-ajout.box-list .price {
     right: 23px;
     top: 23px;
   }
@@ -410,11 +410,11 @@
   }
   /* PROPERTY CAROUSEL BOX
 	================================== */
-  .box-ads.box-list .detail dd {
+  .box-ajout.box-list .detail dd {
     width: 58%;
     border-right: none;
   }
-  .box-ads.box-list .detail dt {
+  .box-ajout.box-list .detail dt {
     width: 40%;
   }
 }
@@ -422,7 +422,7 @@
 @media (max-width: 375px) {
   /* PROPERTY MASONRY
 	================================== */
-  .box-ads.margin-left {
+  .box-ajout.margin-left {
     margin-left: 0;
   }
 }
