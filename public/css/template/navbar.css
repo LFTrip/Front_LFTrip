@@ -8,7 +8,7 @@ header nav {
   font-size: 13px;
 }
 .fixed-header #header-container-box {
-  position: fixed !important;
+  /*  position: fixed !important;*/
   top: 0;
   right: 0;
   bottom: auto;

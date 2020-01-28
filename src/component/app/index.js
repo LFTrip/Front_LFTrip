@@ -6,7 +6,7 @@ import SignUpPage from '../Sign/SignUp';
 import SignInPage from '../Sign/SignIn';
 import LandingPage from '../Landing';
 import AccountPage from '../Account';
-import Header from '../Header';
+import Header from '../header';
 import PasswordForgetPage from '../Password/PasswordForget';
 
 import * as ROUTES from '../../const/routes';
@@ -16,9 +16,7 @@ const App = () => (
 		<div id="page-container">
 			<Router>
 				<Header />
-				<section id="header-page" class="header-margin-base">
-				</section>
-				
+				<div class="clear"/>
 				<div>
 					<Route exact path={ROUTES.LANDING} component={LandingPage} />
 					<Route path={ROUTES.SIGN_UP} component={SignUpPage} />

@@ -389,9 +389,10 @@ const HomePage = () => (
 );
 
 const condition = authUser => !!authUser;
-
+/*
 export default compose(
 	withAuthorization(condition),
-)(HomePage);
+)(HomePage);*/
+export default HomePage;
 
 
