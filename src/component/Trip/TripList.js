@@ -22,15 +22,15 @@ export default class Triplist extends Component{
                                         <a href="property-detail.html" class="hover-effect image image-fill">
                                             <span class="cover"></span>
                                             <img src="http://placehold.it/1240x745/bbbbbb/ffffff" alt="Sample images" />
-                                            <h3 class="title">59 Paterson Ave</h3>
+                                            <h3 class="title">Japon</h3>
                                         </a>
-                                        <span class="price">$ 469.500,00</span>
-                                        <span class="address"><i class="fa fa-map-marker"></i> Hoboken, NJ 07030, USA</span>
+                                        <span class="price"> budget $ 469.500,00</span>
+                                        <span class="address"><i class="fa fa-map-marker"></i> </span>
                                         <span class="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by insages of Lorem Ipsum available, but the majority have suffered alteratiojected humour.</span>
                                         <dl class="detail">
-                                            <dt class="status">Status:</dt><dd><span>Sale</span></dd>
-                                            <dt class="bed">Beds:</dt><dd><span>4</span></dd>
-                                            <dt class="bath">Baths:</dt><dd><span>2</span></dd>
+                                            <dt class="status"></dt><dd><span>Sale</span></dd>
+                                            <dt class="bed"></dt><dd><span>4</span></dd>
+                                            <dt class="bath"></dt><dd><span>2</span></dd>
                                         </dl>
                                         <div class="footer">
                                             <a href="property-detail.html" class="btn btn-default">Read now</a>

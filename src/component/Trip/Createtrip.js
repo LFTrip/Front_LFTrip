@@ -20,7 +20,6 @@ export default class Createtrip extends Component{
                                 <li><a class="faq-button active" href="#basic"><i class="icon fa fa-check-square-o"></i>Basic Information</a></li>
                                 <li><a class="faq-button" href="#summary"><i class="icon fa fa-th-list"></i> Summary</a></li>
                                 <li><a class="faq-button" href="#images"><i class="icon fa fa-picture-o"></i> Images</a></li>
-                                <li><a class="faq-button" href="#features"><i class="icon fa fa-sliders"></i> Features </a></li>
                                 <li><a class="faq-button" href="#map"><i class="icon fa fa-map-marker"></i>Place on Map</a></li>
                             </ul>
                         </div>
@@ -59,9 +58,9 @@ export default class Createtrip extends Component{
                                     <div class="col-md-4 space-form">
                                         <div class="slider" id="price-range"></div>
                                         <div class="price-slider price">
-                                            <span id="price-value-min"></span> 
+                                            <span id="price-value-min">200   </span> 
                                             <span class="separator">$</span>
-                                            <span id="price-value-max"></span>					
+                                            <span id="price-value-max">9000</span>					
                                         </div>
                                     </div>
                                     <div class="col-md-4 space-form">
@@ -120,33 +119,7 @@ export default class Createtrip extends Component{
                                 </span>
                             </div>
 
-                            <div class="info-block" id="features">
-                                <div class="section-title line-style">
-                                    <h3 class="title">Features</h3>
-                                </div>
-                                <div class="row features-box">
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Swimming Pool" checked /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Fire Extinguisher" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Close to School" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Air Conditioning" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Built-in Kitchen" checked/></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Balcony" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Dryer" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Solar Heat" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Wine Cellar" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Health Club" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Hospital" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Sport Club" checked/></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Golf Course" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Lake View" checked/></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Backyard" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Pet Allowed" /></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Business District" checked/></div>
-                                    <div class="col-xs-6 col-sm-4 col-md-3"><input class="labelauty" type="checkbox" data-labelauty="Laundry" checked/></div>
-                                </div>
-                            </div>
-
-                            <div class="info-block" id="map">
+                           <div class="info-block" id="map">
                                 <div class="section-title line-style">
                                     <h3 class="title">Place on Map</h3>
                                 </div>

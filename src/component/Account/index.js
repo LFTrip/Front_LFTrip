@@ -82,7 +82,7 @@ export default class AccountPage extends Component{
                                     <ul class="profile">
                                         <li>
                                             <span>Email</span> 
-                                            admin@prohome.com
+                                            admin@Trip.com
                                             <i class="icon fa fa-pencil"></i>
                                             <i class="set-privacy fa fa-lock"></i>
                                         </li>
@@ -104,23 +104,23 @@ export default class AccountPage extends Component{
                                     <ul class="profile">
                                         <li>
                                             <span>Facebook</span> 
-                                            http://facebook.com/diane.hayes-prohome.com 
+                                            http://facebook.com/diane.hayes-Trip.com 
                                             <i class="icon fa fa-pencil"></i>
                                             <i class="set-privacy fa fa-lock"></i>
                                         </li>
                                         <li>
                                             <span>Twitter</span> 
-                                            @diane.prohome.com 
+                                            @diane.Trip.com 
                                             <i class="icon fa fa-pencil"></i>
                                         </li>
                                         <li>
                                             <span>Google+</span> 
-                                            @diane.prohome 
+                                            @diane.Trip 
                                             <i class="icon fa fa-pencil"></i>
                                         </li>
                                         <li>
                                             <span>Web</span> 
-                                            http://www.prohome.com/ 
+                                            http://www.Trip.com/ 
                                             <i class="icon fa fa-pencil"></i>
                                         </li>
                                     </ul>

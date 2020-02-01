@@ -60,9 +60,9 @@ class SignInFormBase extends Component {
 							<h3>to Trip</h3>
 							.<br />
 							<div class="bs-callout callout-info">
-								<h4>OK</h4>
+								<h4>Présentation</h4>
 								<ul class="text">
-									<li>r</li>
+									<li></li>
 									<li></li>
 								</ul>
 							</div>

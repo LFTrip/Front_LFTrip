@@ -31,12 +31,6 @@ const Header = () => (
                             <Link to={ROUTES.ACCOUNT}> Account</Link>
                         </li>
                         <li className="has_submenu">
-                            <Link to={ROUTES.TRIP}> Trip</Link>
-                        </li>
-                        <li className="has_submenu">
-                            <Link to={ROUTES.TRIPDETAIL}> Trip detail</Link>
-                        </li>
-                        <li className="has_submenu">
                             <Link to={ROUTES.CREATE_TRIP}> Create trip</Link>
                         </li>
                     </ul>
