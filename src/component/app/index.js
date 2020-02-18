@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
-import HomePage from '../Home';
+import HomePage from '../Home/HomePage';
 import SignUpPage from '../Sign/SignUp';
 import SignInPage from '../Sign/SignIn';
 import LandingPage from '../Landing';
-import AccountPage from '../Account';
+import AccountPage from '../Account/AccountPage';
 import Header from '../header';
 import PasswordForgetPage from '../Password/PasswordForget';
 
