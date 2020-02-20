@@ -18,7 +18,7 @@ const Header = () => (
             </div>			
         </div>
         <div className="logo hidden-xs">
-            <Link data-section="sign-in" to={ROUTES.LANDING}> <img id="logo-header" src="images/LOGO min200.png" alt="" ></img></Link>
+            <Link data-section="sign-in" to={ROUTES.HOME}> <img id="logo-header" src="images/LOGO min200.png" alt="" ></img></Link>
         </div>
         <div className="menu-navbar">
             <div className="container" id="menu-nav">

@@ -7,6 +7,17 @@ export default class ProfilInformation extends React.Component{
     }
 
     render() {
+        const firstname = this.props.userInfo.map(value => value.firstname)
+        const lastName = this.props.userInfo.map(value => value.lastname)
+        const password = this.props.userInfo.map(value => value.lastname)
+        const email = this.props.userInfo.map(value => value.lastname)
+        const birthDate = this.props.userInfo.map(value => value.lastname)
+        const sexe = this.props.userInfo.map(value => value.lastname)
+        const city = this.props.userInfo.map(value => value.lastname)
+        const phoneNumber = this.props.userInfo.map(value => value.lastname)
+        const description = this.props.userInfo.map(value => value.lastname)
+
+
         return (
             <React.Fragment>
                 <div class="col-md-7">
@@ -16,14 +27,16 @@ export default class ProfilInformation extends React.Component{
                     </div>
                     <ul class="profile">
                         <li class="disabled">
-                            <span>Username</span> Tremont
-                        </li>
-                        <li>
-                            <span>Name</span> Diane Hayes
+                            <span>FirstName</span> {firstname}
                             <i class="icon fa fa-pencil"></i>
                         </li>
                         <li>
-                            <span>Password</span> &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+                            <span>LastName</span> Diane Hayes
+                            <i class="icon fa fa-pencil"></i>
+                        </li>
+                        <li>
+                            <span>Password</span> <input type="hidden" />&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+                            <i class="icon fa fa-pencil"></i>
                         </li>
                         <li>
                             <span>Place of birth</span> New York, NY

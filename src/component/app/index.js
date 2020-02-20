@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
-import HomePage from '../Home/HomePage';
+import HomePage from '../Home';
 import SignUpPage from '../Sign/SignUp';
 import SignInPage from '../Sign/SignIn';
-import LandingPage from '../Landing';
-import AccountPage from '../Account/AccountPage';
+import AccountPage from '../Account';
 import Header from '../header';
 import PasswordForgetPage from '../Password/PasswordForget';
 
@@ -18,7 +17,6 @@ const App = () => (
 				<Header />
 				<div class="clear"/>
 				<div>
-					<Route exact path={ROUTES.LANDING} component={LandingPage} />
 					<Route path={ROUTES.SIGN_UP} component={SignUpPage} />
 					<Route path={ROUTES.HOME} component={HomePage} />
 					<Route path={ROUTES.SIGN_IN} component={SignInPage} />

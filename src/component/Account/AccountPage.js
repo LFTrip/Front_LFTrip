@@ -1,20 +1,41 @@
 import React from 'react';
+import { withBackaccessContext } from '../BackEnd';
 import ProfilPicture from './ProfilPicture';
 import ProfilContact from './ProfilContact';
 import AccountMenu from './AccountMenu';
 import ProfilActivity from './ProfilActivity';
 import ProfilInformation from './ProfilInformation';
 
-export default class AccountPage extends React.Component{
+class AccountPage  extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-
+            userData : [
+                {
+                    id : "",
+                    firstname : "blblblbl",
+                    lastname : "",
+                    email : "",
+                    birthDate : "",
+                    sexe : "",
+                    city : "",
+                    phoneNumber : "",
+                    departureAirport : "",
+                    description : "",
+                    avatarPath : "",
+                }
+            ]
         }
+    }
+
+    componentDidMount(){
+        //call api
     }
     
     render()
     {
+        const userAvatarPath = this.state.userData.map(value => value.avatarPath)
+
         return(
             <section id="user-profile">
                 <div class="container">
@@ -27,7 +48,7 @@ export default class AccountPage extends React.Component{
                                     </div>
                                 </div>
                                 <div class="info-agent">
-                                    <ProfilPicture />	
+                                    <ProfilPicture imagePath={userAvatarPath} />	
                                     <ProfilContact />				
                                 </div>
                             </div>
@@ -37,7 +58,7 @@ export default class AccountPage extends React.Component{
                         <div class="col-sm-8 col-md-9">
 
                             <div class="row">
-                                <ProfilInformation />
+                                <ProfilInformation userInfo={this.state.userData} />
                                 <ProfilActivity />
                             </div>
 
@@ -48,3 +69,5 @@ export default class AccountPage extends React.Component{
         )
     }
 }
+
+export default withBackaccessContext(AccountPage);
