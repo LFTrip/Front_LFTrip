@@ -10,7 +10,7 @@ class AccountPage  extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            userData : [
+            userData : 
                 {
                     id : "",
                     firstname : "Diane",
@@ -25,18 +25,36 @@ class AccountPage  extends React.Component{
                     description : "lorem ipsum",
                     avatarPath : "",
                 }
-            ]
         }
     }
 
     componentDidMount(){
         //call api
     }
+
+    saveDataForm = (dataToSave) => {
+       //save, change state, call api
+       console.log(dataToSave.firstname)
+       this.setState({
+           userData : {
+                firstname : dataToSave.firstname,
+                lastname : dataToSave.lastname,
+                email : dataToSave.email,
+                password : dataToSave.password,
+                birthDate : dataToSave.birthDate,
+                sexe : dataToSave.sexe,
+                city : dataToSave.city,
+                phoneNumber : dataToSave.phoneNumber,
+                description : dataToSave.description
+           }
+       })
+       console.log(this.state.userData.firstname)
+    }
     
     render()
     {
-        const userAvatarPath = this.state.userData.map(value => value.avatarPath)
-
+        const userAvatarPath = this.state.userData.avatarPath
+        console.log(this.state.userData.firstname)
         return(
             <section id="user-profile">
                 <div class="container">
@@ -59,7 +77,7 @@ class AccountPage  extends React.Component{
                         <div class="col-sm-8 col-md-9">
 
                             <div class="row">
-                                <ProfilInformation userInfo={this.state.userData} />
+                                <ProfilInformation userInfo={this.state.userData} saveData={this.saveDataForm} />
                                 <ProfilActivity />
                             </div>
 
