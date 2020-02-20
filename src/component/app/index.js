@@ -5,7 +5,7 @@ import HomePage from '../Home';
 import SignUpPage from '../Sign/SignUp';
 import SignInPage from '../Sign/SignIn';
 import AccountPage from '../Account';
-import Header from '../header';
+import Header from '../Header';
 import PasswordForgetPage from '../Password/PasswordForget';
 
 import * as ROUTES from '../../const/routes';

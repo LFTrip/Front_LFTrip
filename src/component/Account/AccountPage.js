@@ -11,13 +11,13 @@ import {withAuthentification} from '../Session';
 class AccountPage  extends React.Component{
     constructor(props){
         super(props);
-        console.log(props);
         this.state = {
-            userData : props.authUse
+            userData : props.authUser
         }
     }
 
-    componentDidMount(){
+
+   /* componentDidMount(){
         this.props.backaccess.getDataWitId(1, 'login').then(value =>{
             if(value!== undefined){
                 this.setState({
@@ -46,7 +46,7 @@ class AccountPage  extends React.Component{
                 
             })
         });
-    }
+    }*/
 
     saveDataForm = (dataToSave) => {
        //save, change state, call api
@@ -68,7 +68,8 @@ class AccountPage  extends React.Component{
     
     render()
     {
-        const userAvatarPath = this.state.userData.avatarPath
+        console.log(this.state.userData)
+        const userAvatarPath = this.state.userData.avatar_path
         console.log(this.state.userData.firstname)
         return(
             <section id="user-profile">
