@@ -42,14 +42,14 @@ class PasswordChangeForm extends Component {
 
 		return (
 			<div>
-				<h3 class="title">Change Your Password</h3>
-				<form onSubmit={this.onSubmit}  class="grey-box">
-					<span class="text">
+				<h3 className="title">Change Your Password</h3>
+				<form onSubmit={this.onSubmit}  className="grey-box">
+					<span className="text">
 						There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration inble. If you are of going.
 					</span>
-					<input value={oldpassword} onChange={this.onChange} type="password" class="form-control" id="old-password" name="old-password" placeholder="Old password"/>
-					<input value={passwordOne} onChange={this.onChange} type="password" class="form-control" id="passwordOne" name="passwordOne" placeholder="New password"/>
-					<input value={passwordTwo} onChange={this.onChange} type="password" class="form-control" id="passwordTwo" name="passwordTwo" placeholder="Confirm new password"/>
+					<input value={oldpassword} onChange={this.onChange} type="password" className="form-control" id="old-password" name="old-password" placeholder="Old password"/>
+					<input value={passwordOne} onChange={this.onChange} type="password" className="form-control" id="passwordOne" name="passwordOne" placeholder="New password"/>
+					<input value={passwordTwo} onChange={this.onChange} type="password" className="form-control" id="passwordTwo" name="passwordTwo" placeholder="Confirm new password"/>
 						
 					<button className="btn btn-defaul" type="submit">
 						Reset My Password

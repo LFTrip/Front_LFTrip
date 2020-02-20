@@ -13,24 +13,24 @@ export default class Createtrip extends Component{
     {
         return(
             <section id="new-property">
-                <div class="container">
-                    <div class="row">
+                <div className="container">
+                    <div className="row">
                         
-                        <div class="col-sm-9 col-md-9">
+                        <div className="col-sm-9 col-md-9">
 
-                            <div class="info-block" id="basic">
-                                <div class="section-title line-style no-margin">
-                                    <h3 class="title">Basic Information</h3>
+                            <div className="info-block" id="basic">
+                                <div className="section-title line-style no-margin">
+                                    <h3 className="title">Basic Information</h3>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-5 space-form">
-                                        <input id="title" class="form-control" type="text" placeholder="Title" name="title"/>
+                                <div className="row">
+                                    <div className="col-md-5 space-form">
+                                        <input id="title" className="form-control" type="text" placeholder="Title" name="title"/>
                                     </div>
-                                    <div class="col-md-7 space-form">
-                                        <input id="address" class="form-control" type="text" placeholder="Address" name="address"/>
+                                    <div className="col-md-7 space-form">
+                                        <input id="address" className="form-control" type="text" placeholder="Address" name="address"/>
                                     </div>
-                                    <div class="col-md-12">
-                                        <textarea name="description" id="description" class="form-control description">
+                                    <div className="col-md-12">
+                                        <textarea name="description" id="description" className="form-control description">
                             
                                             ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate augue non bibendum dapibus.
                                             Phasellus fermentum nulla non ultricies vestibulum. Curabitur dictum nisl quis condimentum tempus. 
@@ -42,29 +42,29 @@ export default class Createtrip extends Component{
                                     </div>
                                 </div>
                             </div>
-                            <div class="info-block" id="summary">
-                                <div class="section-title line-style">
-                                    <h3 class="title">Summary</h3>
+                            <div className="info-block" id="summary">
+                                <div className="section-title line-style">
+                                    <h3 className="title">Summary</h3>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-4 space-form">
-                                        <div class="slider" id="price-range"></div>
-                                        <div class="price-slider price">
+                                <div className="row">
+                                    <div className="col-md-4 space-form">
+                                        <div className="slider" id="price-range"></div>
+                                        <div className="price-slider price">
                                             <span id="price-value-min">200   </span> 
-                                            <span class="separator">$</span>
+                                            <span className="separator">$</span>
                                             <span id="price-value-max">9000</span>					
                                         </div>
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <select class="dropdown" data-settings='{"cutOff": 5}'>
+                                    <div className="col-md-4 space-form">
+                                        <select className="dropdown" data-settings='{"cutOff": 5}'>
                                             <option value="">-- Any Purpose --</option>
                                             <option value="rent">Rent</option>
                                             <option value="sell">Sell</option>                        
                                         </select>
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <select class="dropdown" data-settings='{"cutOff": 5}'>
+                                    <div className="col-md-4 space-form">
+                                        <select className="dropdown" data-settings='{"cutOff": 5}'>
                                             <option value="">-- Any Type --</option>
                                             <option value="apartments">Apartments</option>
                                             <option value="condos">Condos</option>
@@ -75,8 +75,8 @@ export default class Createtrip extends Component{
                                             <option value="villa">Villa</option>                        
                                         </select>
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <select class="dropdown">
+                                    <div className="col-md-4 space-form">
+                                        <select className="dropdown">
                                             <option value="">-- Any Status --</option>
                                             <option value="Normal">Normal</option>
                                             <option value="Available">Available</option>
@@ -85,39 +85,39 @@ export default class Createtrip extends Component{
                                             <option value="Open House">Open House</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <input class="form-control" type="text" name="bathroom" id="bathroom" data-text="Bathroom" value="3" />
+                                    <div className="col-md-4 space-form">
+                                        <input className="form-control" type="text" name="bathroom" id="bathroom" data-text="Bathroom" value="3" />
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <input class="form-control" type="text" name="bedroom" id="bedroom" data-text="Bedroom" value="2" />
+                                    <div className="col-md-4 space-form">
+                                        <input className="form-control" type="text" name="bedroom" id="bedroom" data-text="Bedroom" value="2" />
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <input class="form-control" type="text" name="property-size" id="property-size" data-text="Size Property" value="120" />
+                                    <div className="col-md-4 space-form">
+                                        <input className="form-control" type="text" name="property-size" id="property-size" data-text="Size Property" value="120" />
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <input id="video-source" class="form-control" type="text" placeholder="Video source ID" name="video-source"/>
+                                    <div className="col-md-4 space-form">
+                                        <input id="video-source" className="form-control" type="text" placeholder="Video source ID" name="video-source"/>
                                     </div>
-                                    <div class="col-md-4 space-form">
-                                        <input id="periodic-price" class="form-control" type="text" placeholder="Price Label (e.g. 'per month')" name="periodic-price" />
+                                    <div className="col-md-4 space-form">
+                                        <input id="periodic-price" className="form-control" type="text" placeholder="Price Label (e.g. 'per month')" name="periodic-price" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="info-block" id="images">
-                                <div class="section-title line-style">
-                                    <h3 class="title">Images</h3>
+                            <div className="info-block" id="images">
+                                <div className="section-title line-style">
+                                    <h3 className="title">Images</h3>
                                 </div>
-                                <form action="./upload.php" method="post" class="dropzone"></form>
-                                <span class="text">
+                                <form action="./upload.php" method="post" className="dropzone"></form>
+                                <span className="text">
                                     <strong>Drop files</strong> here or <strong>click</strong> to upload.<br />
                                 </span>
                             </div>
 
-                           <div class="info-block" id="map">
-                                <div class="section-title line-style">
-                                    <h3 class="title">Place on Map</h3>
+                           <div className="info-block" id="map">
+                                <div className="section-title line-style">
+                                    <h3 className="title">Place on Map</h3>
                                 </div>
                                 <div id="map-canvas" style={{height: "300px"}}></div>
-                                <div id="position"><i class="fa fa-map-marker"></i> Drag the pin to the location on the map</div>
+                                <div id="position"><i className="fa fa-map-marker"></i> Drag the pin to the location on the map</div>
                             </div>
                        </div>
                     </div>

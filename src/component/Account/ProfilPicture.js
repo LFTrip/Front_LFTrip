@@ -9,7 +9,7 @@ export default class ProfilPicture extends React.Component{
     render() {
         return (
             <React.Fragment>
-                <span class="name">Diane Hayes</span>
+                <span className="name">Diane Hayes</span>
             </React.Fragment>
         );
       }

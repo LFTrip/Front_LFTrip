@@ -15,7 +15,7 @@ const App = () => (
 		<div id="page-container">
 			<Router>
 				<Header />
-				<div class="clear"/>
+				<div className="clear"/>
 				<div>
 					<Route path={ROUTES.SIGN_UP} component={SignUpPage} />
 					<Route path={ROUTES.HOME} component={HomePage} />

@@ -9,13 +9,13 @@ class Map extends React.Component{
     render() {
         return (
             <React.Fragment>
-                <section id="maps" class="header-margin-base">
-                    <div class="loading-container">
-                        <div class="spinner"></div>
-                        <div class="text"><span>Loading Maps</span>please wait</div>
+                <section id="maps" className="header-margin-base">
+                    <div className="loading-container">
+                        <div className="spinner"></div>
+                        <div className="text"><span>Loading Maps</span>please wait</div>
                     </div>
-                    <div class="find-result"></div>
-                    <div class="map map-home" id="map-canvas"></div>
+                    <div className="find-result"></div>
+                    <div className="map map-home" id="map-canvas"></div>
                 </section>
             </React.Fragment>
         );

@@ -33,10 +33,8 @@ class SignInFormBase extends Component {
 			.then(() => {
 				this.setState({ ...INITIAL_STATE });
 				this.props.history.push(ROUTES.HOME);
-				console.log("ok")
 			})
 			.catch(error => {
-				console.log("ok")
 				this.setState({ error });
 			});
 
@@ -52,16 +50,16 @@ class SignInFormBase extends Component {
 
 
 		return (
-			<div class="container">
+			<div className="container">
 				<div className="row">
 					<div className="col-sm-7 col-sm-push-5 col-md-8 col-md-push-4">
 						<div className="text-desclaimer">
 							<h1>Welcome</h1>
 							<h3>to Trip</h3>
 							.<br />
-							<div class="bs-callout callout-info">
+							<div className="bs-callout callout-info">
 								<h4>Présentation</h4>
-								<ul class="text">
+								<ul className="text">
 									<li></li>
 									<li></li>
 								</ul>
@@ -74,16 +72,16 @@ class SignInFormBase extends Component {
 							<h2 className="title">Login</h2>
 							<form onSubmit={this.onSubmit}>
 								<div className="field">
-									<input	name="email" value={email} onChange={this.onChange} class="form-control" type="text" placeholder="Email Address" />
+									<input	name="email" value={email} onChange={this.onChange} className="form-control" type="text" placeholder="Email Address" />
 									<i className="fa fa-user user"></i>
 								</div>
 								<div className="field">
-									<input 	name="password" value={password} onChange={this.onChange} class="form-control"  type="password" placeholder="Password" />
+									<input 	name="password" value={password} onChange={this.onChange} className="form-control"  type="password" placeholder="Password" />
 									<i className="fa fa-ellipsis-h"></i>
 								</div>
 								
 								<div className="field footer-form text-right">
-									<span className="remember"><input class="labelauty" type="checkbox" data-labelauty="Keep me signed in" checked/></span>
+									<span className="remember"><input className="labelauty" type="checkbox" data-labelauty="Keep me signed in" /></span>
 									<button className="btn btn-default button-form"  type="submit">Login</button>
 								</div>		
 								{error && <p>{error.message}</p>}

@@ -11,12 +11,12 @@ class TripTeaser extends React.Component{
         return (
             <React.Fragment>
                 <section id="recent-list">
-                    <div class="section-detail">
+                    <div className="section-detail">
                         <h1>
                         <span>Have </span>
                         <span id="spinner-show">
-                            <em class="current">Groups</em>
-                            <span class="next"><span></span></span>
+                            <em className="current">Groups</em>
+                            <span className="next"><span></span></span>
                         </span>
                         <span>Trip</span>
                         </h1>

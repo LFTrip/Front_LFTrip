@@ -6,10 +6,10 @@ import * as ROUTES from '../../../const/routes';
 
 const PasswordForgetPage = () => (
 	<section id="user-profile">
-		<div class="container">
-			<div class="row">
-					<div class="section-title line-style">	
-						<h3 class="title">Password Forget</h3>
+		<div className="container">
+			<div className="row">
+					<div className="section-title line-style">	
+						<h3 className="title">Password Forget</h3>
 					</div>
 					<PasswordForgetForm />
 			</div>
@@ -51,12 +51,12 @@ class PasswordForgetFormBase extends Component {
 	render() {
 		const { email, error } = this.state;
 		return (
-			<form onSubmit={this.onSubmit} class="grey-box">
-				<span class="text">
+			<form onSubmit={this.onSubmit} className="grey-box">
+				<span className="text">
 					Password Forget				
 				</span>
-				<input value={email} onChange={this.onChange} type="password" class="form-control" id="email" name="email" placeholder="Email Address"/>
-				<button type="submit" class="btn btn-default">Reset My Password</button>	
+				<input value={email} onChange={this.onChange} type="password" className="form-control" id="email" name="email" placeholder="Email Address"/>
+				<button type="submit" className="btn btn-default">Reset My Password</button>	
 				{error && <p>{error.message}</p>}							
 			</form>
 		);

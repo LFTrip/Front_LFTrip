@@ -1,6 +1,5 @@
-import  * as conf from '../../const/params';
 import axios from "axios";
-const config = {
+const conf = {
     url : "http://localhost:8080/api/v1/",
     uri : {
         "login" : 'users/',
@@ -13,11 +12,9 @@ export default class BackConnexion{
     }
 
     dosignWithEmailAndPassword = (data, uri) =>{
-        data.email = "feige@gmail.com";
-        data.password = "password";
         
         return new Promise((resolve, reject) => { resolve(axios.post(
-            config["url"]+config["uri"][uri],
+            conf["url"]+conf["uri"][uri],
             {
                 "email": data.email,
                 "password" : data.password
@@ -54,40 +51,19 @@ export default class BackConnexion{
         )
     }
 
-    callPost = (data, uri) =>{
-        axios.post(
-            conf["url"]+conf["path"][uri],
-            {
-                Data : data
-            }.then(response=> {
-                if(response.status === 200){
-                    return data;
-                }else{
-                    return null;
-                }
-            }).catch(error =>{
-                console.log(error);
-                return error;
-            })
-        )
-    }
-
-
-    
-
     postDate= (data, uri) =>{        
-        return new Promise((resolve, reject) => { resolve(
+        return new Promise((resolve, reject) => { 
+            resolve(
             axios.post(
                 conf["url"]+conf["path"][uri],
             {
                 data
-            }).then(response=> {
-				console.log("ok")
+            }).then(response => {
 
                 if(response.status === 200){
-                    return response.data;
+                  return response.data;
                 }else{
-                    reject( console.log(response.data));
+                    reject( response.status);
                 }
             }).catch(error =>{
                 reject( error);
@@ -95,17 +71,37 @@ export default class BackConnexion{
     }
 
     getDataWitId = (id, uri) =>{        
-        return new Promise((resolve, reject) => { resolve(axios.get(
-            conf["url"]+conf["path"][uri],
-            {
-                id : id
-            }).then(response=> {
-				console.log("ok")
+        return new Promise(
+            (resolve, reject) => {
+                resolve(
+                    axios.get(
+                        conf["url"]+conf["uri"][uri]+id,
+                         {
+                             id : id
+                         }).then(response=> {
+
+                            if(response.status === 200){
+                                return response.data;
+                            }else{
+                                reject( response.data);
+                            }
+                        }).catch(error =>{
+                            reject( error);
+                        })
+                )
+            });
+    }
+
+    getData = ( uri) =>{        
+        return new Promise((resolve, reject) => { 
+            resolve(axios.get(
+                conf["url"]+conf["uri"][uri]
+            ).then(response=> {
 
                 if(response.status === 200){
                     return response.data;
                 }else{
-                    reject( console.log(response.data));
+                    reject( response.data);
                 }
             }).catch(error =>{
                 reject( error);
@@ -113,66 +109,41 @@ export default class BackConnexion{
         });
     }
 
-    getData = ( uri) =>{        
-        return new Promise((resolve, reject) => { resolve(axios.get(
-           "http://localhost:8081/"+uri).then(response=> {
-				console.log("ok")
-
-                if(response.status === 200){
-                    return response.data;
-                }else{
-                    ///reject( console.log(response.data));
-                }
-            }).catch(error =>{
-				console.log("ok")
-                return  {"name": "toto"};
-                reject( console.log(error));
-            }))
-            console.log("ok") 
-            return  {"name": "toto"};});
-    }
-
     updateData = (data, uri) =>{        
-        return new Promise((resolve, reject) => { resolve(axios.put(
-           "http://localhost:8081/"+uri,
-            {
-                data
-            }).then(response=> {
-				console.log("ok")
+        return new Promise((resolve, reject) => { 
+            resolve(axios.put(
+                conf["url"]+conf["uri"][uri],
+                {
+                    data
+                }
+            )
+            .then(response=> {
 
                 if(response.status === 200){
                     return response.data;
                 }else{
-                    ///reject( console.log(response.data));
+                    reject( response.data);
                 }
             }).catch(error =>{
-				console.log("ok")
-                return  {"name": "toto"};
-                reject( console.log(error));
-            }))
-            console.log("ok") 
-            return  {"name": "toto"};});
+                reject( error);
+            }))});
     }
 
     deleteData= (data, uri) =>{        
         return new Promise((resolve, reject) => { resolve(axios.delete(
-           "http://localhost:8081/"+uri,
+            conf["url"]+conf["uri"][uri],
             {
                 data
             }).then(response=> {
-				console.log("ok")
 
                 if(response.status === 200){
-                    return response.data;
+                    return response.status;
                 }else{
-                    ///reject( console.log(response.data));
+                    reject( response.status);
                 }
             }).catch(error =>{
-				console.log("ok")
-                return  {"name": "toto"};
                 reject( console.log(error));
             }))
-            console.log("ok") 
-            return  {"name": "toto"};});
+        });
     }
 }

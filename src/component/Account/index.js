@@ -1,5 +1,17 @@
 import AccountPage from './AccountPage'
 
-export default AccountPage ; 
+import React from 'react';
 
-//export {BackaccessContext, withBackaccessContext};
+import { AuthUserContext, withAuthorization } from '../Session';
+
+const Page = () => (
+     <AuthUserContext.Consumer> 
+      {authUser => (
+            <AccountPage authUser = {authUser}/>
+        )}
+     </AuthUserContext.Consumer>
+);
+
+const condition = authUser => !!authUser;
+
+export default withAuthorization(condition)(Page);

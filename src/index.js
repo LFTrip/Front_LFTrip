@@ -9,7 +9,8 @@ import BackConnexion, { BackaccessContext } from './component/BackEnd';
 ReactDOM.render(
 		<BackaccessContext.Provider value={new BackConnexion()}>
 			<App />
-		</BackaccessContext.Provider>,
+		</BackaccessContext.Provider>
+	,
 	document.getElementById('root')
 );
 

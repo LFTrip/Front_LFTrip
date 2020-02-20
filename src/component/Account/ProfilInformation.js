@@ -4,115 +4,131 @@ export default class ProfilInformation extends React.Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            userData : {
+                firstname : "",
+                lastname : "",
+                password : "",
+                email : "",
+                birthDate : "",
+                sexe : "",
+                city : "",
+                phoneNumber : "",
+                description : ""
+            }
+        }
     }
 
-    inputableForm = () => {
-        var allLabel = document.getElementsByClassName('inputable');
-        for (var i = 0; i < allLabel.length; i ++) {
-            allLabel[i].style.display = 'none';
+    // change DOM struct to get input field to edit user information
+    editInformationMode = () => { 
+        this.switchInputable("inputFormHidden", "inputable")
+    }
+
+    // reinitialize DOM struct and save user information
+    saveInformation = () => {  
+        this.switchInputable("inputable", "inputFormHidden")
+        //remonté data
+        this.state.userData.firstname = document.getElementById('firstname').value
+        this.state.userData.lastname = document.getElementById('lastname').value
+        this.state.userData.sexe = document.getElementById('sexe').value
+        this.state.userData.description = document.getElementById('description').value
+        //this.state.userData.email = document.getElementById('email').value
+        this.state.userData.birthDate = document.getElementById('birthDate').value
+        //this.state.userData.city = document.getElementById('city').value
+        //this.state.userData.phoneNumber = document.getElementById('phoneNumber').value
+
+        this.props.saveData(this.state.userData)
+    }
+
+    // param : on is class name to display, off is class name to hidechange Dom to display and hide
+    // change DOM struct to hide and display different inputs
+    switchInputable = (on, off) => { 
+        var toHide = document.getElementsByClassName(off);
+        for (var i = 0; i < toHide.length; i ++) {
+            toHide[i].style.display = 'none';
         }
-        var allInput = document.getElementsByClassName('inputFormHidden');
-        for (var i = 0; i < allInput.length; i ++) {
-            allInput[i].style.display = 'block';
+        var toShow = document.getElementsByClassName(on);
+        for (var i = 0; i < toShow.length; i ++) {
+            toShow[i].style.display = 'block';
         }
     }
 
     render() {
-        const firstname = this.props.userInfo.map(value => value.firstname)
-        const lastname = this.props.userInfo.map(value => value.lastname)
-        const password = this.props.userInfo.map(value => value.lastname)
-        const email = this.props.userInfo.map(value => value.lastname)
-        const birthDate = this.props.userInfo.map(value => value.lastname)
-        const sexe = this.props.userInfo.map(value => value.lastname)
-        const city = this.props.userInfo.map(value => value.lastname)
-        const phoneNumber = this.props.userInfo.map(value => value.lastname)
-        const description = this.props.userInfo.map(value => value.lastname)
+        const {firstname, lastname, password, email, birthDate, sexe, city, phoneNumber, description} = this.props.userInfo
 
 
         return (
             <React.Fragment>
-                <div class="col-md-7">
-                    <div class="section-title line-style no-margin">
-                        <h3 class="title">General Info</h3>
-                        <button class="icon fa fa-cog inputable" onClick={this.inputableForm}> Modifier</button>
+                <div className="col-md-7">
+                    <div className="section-title line-style no-margin">
+                        <h3 className="title">General Info</h3>
+                        <button className="icon fa fa-cog inputable" onClick={this.editInformationMode}> Modifier</button>
+                        <button className="icon fa fa-floppy-o inputFormHidden" onClick={this.saveInformation}> Save</button>
                     </div>
-                    <ul class="profile">
-                        <li class="disabled">
+                    <ul className="profile">
+                        <li className="disabled">
                             <span>FirstName</span> 
-                            <div class="inputable">{firstname}</div> 
-                            <div class="inputFormHidden"><input type="text" value={firstname} /></div>
+                            <div className="inputable">{firstname}</div> 
+                            <div className="inputFormHidden"><input id="firstname" type="text" defaultValue={firstname} /></div>
                         </li>
                         <li>
                             <span>LastName</span>
-                            <div class="inputable">{lastname}</div>
-                            <div class="inputFormHidden"><input type="text" value={firstname} /></div>
+                            <div className="inputable">{lastname}</div>
+                            <div className="inputFormHidden"><input id="lastname" type="text" defaultValue={lastname} /></div>
+                        </li>
+                        <li>
+                            <span>Sexe</span>
+                            <div className="inputable">{sexe}</div>
+                            <div className="inputFormHidden">
+                            <select name="sexe" id="sexe">
+                                <option value={sexe}></option>
+                                <option value="Homme">Homme</option>
+                                <option value="Femme">Femme</option>
+                            </select></div>
+                        </li>
+                        <li>
+                            <span>Date of birth</span>
+                            <div className="inputable">18/01/1973 </div>
+                            <div className="inputFormHidden"><input id="birthDate" type="text" defaultValue={birthDate} /></div>
+                        </li>
+                        <li className="fullwidth">
+                            <span>Short About</span> 
+                            <div className="inputable">{description} </div>
+                            <div className="inputFormHidden"><textarea id="description" type="text" defaultValue={description} /></div>
+                        </li>
+                    </ul>
+                    <div className="section-title line-style">
+                        <h3 className="title">Account Information</h3>
+                    </div>
+                    <ul className="profile">
+                        <li>
+                            <span>Email</span> 
+                            <div className="inputable">{email} </div>
+                            <div className="inputFormHidden"><input type="password" defaultValue={email} /></div>
                         </li>
                         <li>
                             <span>Password</span>
-                            <div class="inputable">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</div>
-                            <div class="inputFormHidden"><input type="password" value="" /></div>
-                        </li>
-                        <li>
-                            <span>Place of birth</span>
-                            <div class="inputable">New York, NY</div> <input type="hidden" class="inputForm" />
-                        </li>
-                        <li>
-                            <span>Date of birth</span> <div class="inputable">18/01/1973 </div>
-                        </li>
-                        <li class="fullwidth">
-                            <span>Short About</span> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur faucibus dui massa, ac rhoncus nisl blandit in. Sed dapibus vehicula felis, eu tempor odio mollis vitae. Sed sollicitudin nibh quis luctus aliquam.<br /><br />Cras ornare in ligula ut iaculis. Vestibulum ultricies imperdiet tempor. Maecenas at mi eu nunc accumsan ultricies.</p>
+                            <div className="inputable">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </div>
+                            <div className="inputFormHidden"><input type="password" defaultValue="" /></div>
                         </li>
                     </ul>
-                    <div class="section-title line-style">
-                        <h3 class="title">Basic Contact</h3>
+                    <div className="section-title line-style">
+                        <h3 className="title">Basic Contact</h3>
                     </div>
-                    <ul class="profile">
+                    <ul className="profile">
                         <li>
                             <span>Email</span> 
                             admin@Trip.com
                         </li>
                         <li>
-                            <span>Skype</span> 
-                            diane.hayes<i class="icon fa fa-pencil"></i>
-                        </li>
-                        <li>
-                            <span>Phone</span> 
-                            (011) 265 98745
-                            <i class="icon fa fa-pencil"></i>
-                            <i class="set-privacy fa fa-lock"></i>
+                            <span>Phone</span>
+                            <div className="inputable">{phoneNumber}</div>
+                            <div className="inputFormHidden"><input type="text" defaultValue={phoneNumber} /></div>
                         </li>
                     </ul>
-                    <div class="section-title line-style">
-                        <h3 class="title">Socian Network</h3>
-                        <i class="icon fa fa-cog"></i>
-                    </div>
-                    <ul class="profile">
-                        <li>
-                            <span>Facebook</span> 
-                            http://facebook.com/diane.hayes-Trip.com 
-                            <i class="icon fa fa-pencil"></i>
-                            <i class="set-privacy fa fa-lock"></i>
-                        </li>
-                        <li>
-                            <span>Twitter</span> 
-                            @diane.Trip.com 
-                            <i class="icon fa fa-pencil"></i>
-                        </li>
-                        <li>
-                            <span>Google+</span> 
-                            @diane.Trip 
-                            <i class="icon fa fa-pencil"></i>
-                        </li>
-                        <li>
-                            <span>Web</span> 
-                            http://www.Trip.com/ 
-                            <i class="icon fa fa-pencil"></i>
-                        </li>
-                    </ul>
-                    <div class="bs-callout callout-danger">
-                        <h4 class="title">Nullam sodales lorem sit amet</h4>
-                        <p class="text">Integer euismod cursus dolor. Curamet pellentesque sed, sodales at augue.</p>
+                    <div className="bs-callout callout-danger">
+                        <h4 className="title">Nullam sodales lorem sit amet</h4>
+                        <p className="text">Integer euismod cursus dolor. Curamet pellentesque sed, sodales at augue.</p>
                     </div>
                     
                 </div>

@@ -91,37 +91,37 @@ class SignUpFormBase extends Component {
 
 
         return (
-            <div class="container">
-                <div class="row">
-                        <div class="col-sm-9 col-md-7">
-                            <div class="section-title line-style no-margin">
-                                <h3 class="title">Create Account</h3> 
+            <div className="container">
+                <div className="row">
+                        <div className="col-sm-9 col-md-7">
+                            <div className="section-title line-style no-margin">
+                                <h3 className="title">Create Account</h3> 
                             </div>
-                            <ul class="profile create">
+                            <ul className="profile create">
                                 <li>
                                     <span>User Name</span>
-                                    <input  placeholder="Full Name"  value={username} onChange={this.onChange} type="text" class="form-control" name="username" id="username" />
+                                    <input  placeholder="Full Name"  value={username} onChange={this.onChange} type="text" className="form-control" name="username" id="username" />
                                 </li>   
                                 <li>
                                     <span>Name</span>
-                                    <input value={name}  onChange={this.onChange} type="text"  placeholder=" Name" class="form-control" name="name" id="name" />
+                                    <input value={name}  onChange={this.onChange} type="text"  placeholder=" Name" className="form-control" name="name" id="name" />
                                 </li>
                                 <li>
                                     <span>Email Address</span>
-                                    <input type="text"  value={email}  onChange={this.onChange} placeholder="Email Address"  class="form-control" name="email" id="email" />
+                                    <input type="text"  value={email}  onChange={this.onChange} placeholder="Email Address"  className="form-control" name="email" id="email" />
                                 </li>
                                 <li>
                                     <span>Password</span>
-                                    <input type="password" class="form-control" value={passwordOne} onChange={this.onChange} name="passwordOne" id="passwordOne" />
+                                    <input type="password" className="form-control" value={passwordOne} onChange={this.onChange} name="passwordOne" id="passwordOne" />
                                 </li>
                                 <li>
                                     <span>Pepeat Password</span>
-                                    <input type="password" class="form-control" value={passwordTwo} onChange={this.onChange} name="passwordTwo" id="passwordTwo" />
+                                    <input type="password" className="form-control" value={passwordTwo} onChange={this.onChange} name="passwordTwo" id="passwordTwo" />
                                 </li>
                             </ul>                            
                         </div>
-                        <div class="col-sm-12 col-md-6 text-right">
-                            <button onSubmit={this.onSubmit} class="btn btn-default signin-button" type="submit"><i class="fa fa-sign-in"></i> Sign up</button>
+                        <div className="col-sm-12 col-md-6 text-right">
+                            <button onSubmit={this.onSubmit} className="btn btn-default signin-button" type="submit"><i className="fa fa-sign-in"></i> Sign up</button>
                             <br/>
                             <PasswordForgetLink />
                             <br/>

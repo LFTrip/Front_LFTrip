@@ -1,50 +1,34 @@
 import React from 'react';
 import { withBackaccessContext } from '../BackEnd';
+
+import { compose } from 'recompose';
 import ProfilPicture from './ProfilPicture';
 import ProfilContact from './ProfilContact';
 import AccountMenu from './AccountMenu';
 import ProfilActivity from './ProfilActivity';
 import ProfilInformation from './ProfilInformation';
-
+import {withAuthentification} from '../Session';
 class AccountPage  extends React.Component{
     constructor(props){
         super(props);
+        console.log(props);
         this.state = {
-            userData : [
-                {
-                    id : "",
-                    firstname : "Diane",
-                    lastname : "Haye",
-                    email : "heyitsme@mail.fr",
-                    password : "",
-                    birthDate : "17/08/1996",
-                    sexe : "F",
-                    city : "London",
-                    phoneNumber : "a",
-                    departureAirport : "",
-                    description : "lorem ipsum",
-                    avatarPath : "",
-                }
-            ]
+            userData : props.authUse
         }
     }
 
     componentDidMount(){
         this.props.backaccess.getDataWitId(1, 'login').then(value =>{
-           
-            console.log(value);
-            if(value!= undefined){
-            this.setState({
-                userData :  [value.data.response]
-            })
-
+            if(value!== undefined){
+                this.setState({
+                    userData :  value.response
+                })
             }
         })
         .catch(error => {
-            console.log(error)
             this.setState({ error });
             this.setState({
-                userData : [
+                userData : 
                     {
                         id : "",
                         firstname : "Diane",
@@ -59,27 +43,46 @@ class AccountPage  extends React.Component{
                         description : "lorem ipsum",
                         avatarPath : "",
                     }
-                ]
+                
             })
         });
+    }
+
+    saveDataForm = (dataToSave) => {
+       //save, change state, call api
+       console.log(dataToSave.firstname)
+       this.setState({
+           userData : {
+                firstname : dataToSave.firstname,
+                lastname : dataToSave.lastname,
+                email : dataToSave.email,
+                password : dataToSave.password,
+                birthDate : dataToSave.birthDate,
+                sexe : dataToSave.sexe,
+                city : dataToSave.city,
+                phoneNumber : dataToSave.phoneNumber,
+                description : dataToSave.description
+           }
+       })
+       console.log(this.state.userData.firstname)
     }
     
     render()
     {
-        const userAvatarPath = this.state.userData.map(value => value.avatarPath)
-
+        const userAvatarPath = this.state.userData.avatarPath
+        console.log(this.state.userData.firstname)
         return(
             <section id="user-profile">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-3">
-                            <div class="agent-box-card grey">
-                                <div class="image-content">
-                                    <div class="image image-fill">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-4 col-md-3">
+                            <div className="agent-box-card grey">
+                                <div className="image-content">
+                                    <div className="image image-fill">
                                         <img alt="Image Sample" src="http://placehold.it/512/bbbbbb/ffffff"/>
                                     </div>
                                 </div>
-                                <div class="info-agent">
+                                <div className="info-agent">
                                     <ProfilPicture imagePath={userAvatarPath} />	
                                     <ProfilContact />				
                                 </div>
@@ -87,10 +90,10 @@ class AccountPage  extends React.Component{
                             <br />
                             <AccountMenu />
                         </div>
-                        <div class="col-sm-8 col-md-9">
+                        <div className="col-sm-8 col-md-9">
 
-                            <div class="row">
-                                <ProfilInformation userInfo={this.state.userData} />
+                            <div className="row">
+                                <ProfilInformation userInfo={this.state.userData} saveData={this.saveDataForm} />
                                 <ProfilActivity />
                             </div>
 
@@ -102,4 +105,5 @@ class AccountPage  extends React.Component{
     }
 }
 
-export default withBackaccessContext(AccountPage);
+
+export default compose( withAuthentification ,withBackaccessContext,)(AccountPage);

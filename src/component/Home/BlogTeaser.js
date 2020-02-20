@@ -12,7 +12,7 @@ class BlogTeaser extends React.Component{
         return (
             <React.Fragment>
                 <section id="recent-news">
-                    <div class="section-detail">
+                    <div className="section-detail">
                         <h1>Retrouvez nos dernièrs blogs et actualités !</h1>
                         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor, sagittis sed elementum dignissim, lobortis.</h2>		
                     </div>

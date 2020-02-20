@@ -6,7 +6,6 @@ import TripTeaser from './TripTeaser';
 import BlogTeaser from './BlogTeaser';
 
 import { compose } from 'recompose';
-import { withAuthorization } from '../Session';
 
 
 class HomePage extends React.Component{
@@ -43,11 +42,6 @@ class HomePage extends React.Component{
 }
 
 
-const condition = authUser => !!authUser;
-/*
-export default compose(
-	withAuthorization(condition),
-)(HomePage);*/
-export default compose(withBackaccessContext(HomePage));
+export default compose(withBackaccessContext)(HomePage);
 
 
