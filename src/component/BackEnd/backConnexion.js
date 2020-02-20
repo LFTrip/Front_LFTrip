@@ -1,10 +1,10 @@
 import  * as conf from '../../const/params';
 import axios from "axios";
 const config = {
-    url : "http://localhost:8081/",
+    url : "http://localhost:8080/api/v1/",
     uri : {
-        "login" : 'login',
-        "logout" : "logout"
+        "login" : 'users/',
+        "logout" : "users/"
     }
 }
 export default class BackConnexion{
@@ -78,7 +78,7 @@ export default class BackConnexion{
     postDate= (data, uri) =>{        
         return new Promise((resolve, reject) => { resolve(
             axios.post(
-           "http://localhost:8081/"+uri,
+                conf["url"]+conf["path"][uri],
             {
                 data
             }).then(response=> {
@@ -94,9 +94,9 @@ export default class BackConnexion{
             }))});
     }
 
-    getDateWitId = (id, uri) =>{        
+    getDataWitId = (id, uri) =>{        
         return new Promise((resolve, reject) => { resolve(axios.get(
-           "http://localhost:8081/"+uri,
+            conf["url"]+conf["path"][uri],
             {
                 id : id
             }).then(response=> {
@@ -105,15 +105,12 @@ export default class BackConnexion{
                 if(response.status === 200){
                     return response.data;
                 }else{
-                    ///reject( console.log(response.data));
+                    reject( console.log(response.data));
                 }
             }).catch(error =>{
-				console.log("ok")
-                return  {"name": "toto"};
-                reject( console.log(error));
+                reject( error);
             }))
-            console.log("ok") 
-            return  {"name": "toto"};});
+        });
     }
 
     getData = ( uri) =>{        
@@ -135,7 +132,7 @@ export default class BackConnexion{
             return  {"name": "toto"};});
     }
 
-    updateDate = (data, uri) =>{        
+    updateData = (data, uri) =>{        
         return new Promise((resolve, reject) => { resolve(axios.put(
            "http://localhost:8081/"+uri,
             {
@@ -157,7 +154,7 @@ export default class BackConnexion{
             return  {"name": "toto"};});
     }
 
-    deleteDate= (data, uri) =>{        
+    deleteData= (data, uri) =>{        
         return new Promise((resolve, reject) => { resolve(axios.delete(
            "http://localhost:8081/"+uri,
             {

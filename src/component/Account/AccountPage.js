@@ -30,7 +30,38 @@ class AccountPage  extends React.Component{
     }
 
     componentDidMount(){
-        //call api
+        this.props.backaccess.getDataWitId(1, 'login').then(value =>{
+           
+            console.log(value);
+            if(value!= undefined){
+            this.setState({
+                userData :  [value.data.response]
+            })
+
+            }
+        })
+        .catch(error => {
+            console.log(error)
+            this.setState({ error });
+            this.setState({
+                userData : [
+                    {
+                        id : "",
+                        firstname : "Diane",
+                        lastname : "Haye",
+                        email : "heyitsme@mail.fr",
+                        password : "",
+                        birthDate : "17/08/1996",
+                        sexe : "F",
+                        city : "London",
+                        phoneNumber : "a",
+                        departureAirport : "",
+                        description : "lorem ipsum",
+                        avatarPath : "",
+                    }
+                ]
+            })
+        });
     }
     
     render()
