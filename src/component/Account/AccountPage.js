@@ -42,7 +42,6 @@ class AccountPage  extends React.Component{
                 email : dataToSave.email,
                 password : dataToSave.password,
                 birthDate : dataToSave.birthDate,
-                sexe : dataToSave.sexe,
                 city : dataToSave.city,
                 phoneNumber : dataToSave.phoneNumber,
                 description : dataToSave.description

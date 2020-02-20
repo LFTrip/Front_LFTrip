@@ -5,6 +5,7 @@ export default class ProfilInformation extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            haveError : false,
             userData : {
                 firstname : "",
                 lastname : "",
@@ -30,12 +31,12 @@ export default class ProfilInformation extends React.Component{
         //remonté data
         this.state.userData.firstname = document.getElementById('firstname').value
         this.state.userData.lastname = document.getElementById('lastname').value
-        this.state.userData.sexe = document.getElementById('sexe').value
+        //this.state.userData.sexe = document.getElementById('sexe').value
         this.state.userData.description = document.getElementById('description').value
-        //this.state.userData.email = document.getElementById('email').value
+        this.state.userData.email = document.getElementById('email').value
         this.state.userData.birthDate = document.getElementById('birthDate').value
-        //this.state.userData.city = document.getElementById('city').value
-        //this.state.userData.phoneNumber = document.getElementById('phoneNumber').value
+        this.state.userData.city = document.getElementById('city').value
+        this.state.userData.phoneNumber = document.getElementById('phoneNumber').value
 
         this.props.saveData(this.state.userData)
     }
@@ -60,6 +61,10 @@ export default class ProfilInformation extends React.Component{
         return (
             <React.Fragment>
                 <div class="col-md-7">
+                    <div class="bs-callout callout-danger">
+                        <h4 class="title">Erreur</h4>
+                        <p class="text">Integer euismod cursus dolor. Curamet pellentesque sed, sodales at augue.</p>
+                    </div>
                     <div class="section-title line-style no-margin">
                         <h3 class="title">General Info</h3>
                         <button class="icon fa fa-cog inputable" onClick={this.editInformationMode}> Modifier</button>
@@ -77,19 +82,19 @@ export default class ProfilInformation extends React.Component{
                             <div class="inputFormHidden"><input id="lastname" type="text" defaultValue={lastname} /></div>
                         </li>
                         <li>
-                            <span>Sexe</span>
-                            <div class="inputable">{sexe}</div>
-                            <div class="inputFormHidden">
-                            <select name="sexe" id="sexe">
-                                <option value={sexe}></option>
-                                <option value="Homme">Homme</option>
-                                <option value="Femme">Femme</option>
-                            </select></div>
+                            <span>City</span>
+                            <div class="inputable">{city}</div>
+                            <div class="inputFormHidden"><input id="city" type="text" defaultValue={city} /></div>
                         </li>
                         <li>
                             <span>Date of birth</span>
                             <div class="inputable">18/01/1973 </div>
-                            <div class="inputFormHidden"><input id="birthDate" type="text" defaultValue={birthDate} /></div>
+                            <div class="inputFormHidden"><input id="birthDate" type="date" defaultValue={birthDate} /></div>
+                        </li>
+                        <li>
+                            <span>Phone</span>
+                            <div class="inputable">{phoneNumber}</div>
+                            <div class="inputFormHidden"><input id="phoneNumber" type="text" defaultValue={phoneNumber} /></div>
                         </li>
                         <li class="fullwidth">
                             <span>Short About</span> 
@@ -104,33 +109,24 @@ export default class ProfilInformation extends React.Component{
                         <li>
                             <span>Email</span> 
                             <div class="inputable">{email} </div>
-                            <div class="inputFormHidden"><input type="password" defaultValue={email} /></div>
+                            <div class="inputFormHidden"><input id="email" type="text" defaultValue={email} /></div>
                         </li>
-                        <li>
+                        <li class="inputable">
                             <span>Password</span>
+                            <div>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </div>
+                            
+                        </li>
+                        <li class="inputFormHidden">
+                            <span>Old Password</span>
                             <div class="inputable">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </div>
-                            <div class="inputFormHidden"><input type="password" defaultValue="" /></div>
+                            <div><input type="password" defaultValue="" /></div>
+                        </li>
+                        <li class="inputFormHidden">
+                            <span>New Password</span>
+                            <div class="inputable">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </div>
+                            <div><input type="password" defaultValue="" /></div>
                         </li>
                     </ul>
-                    <div class="section-title line-style">
-                        <h3 class="title">Basic Contact</h3>
-                    </div>
-                    <ul class="profile">
-                        <li>
-                            <span>Email</span> 
-                            admin@Trip.com
-                        </li>
-                        <li>
-                            <span>Phone</span>
-                            <div class="inputable">{phoneNumber}</div>
-                            <div class="inputFormHidden"><input type="text" defaultValue={phoneNumber} /></div>
-                        </li>
-                    </ul>
-                    <div class="bs-callout callout-danger">
-                        <h4 class="title">Nullam sodales lorem sit amet</h4>
-                        <p class="text">Integer euismod cursus dolor. Curamet pellentesque sed, sodales at augue.</p>
-                    </div>
-                    
                 </div>
             </React.Fragment>
         );
