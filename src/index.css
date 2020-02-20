@@ -2,3 +2,8 @@
 .enlever{
     display: block !important;
 }
+
+
+.inputFormHidden{
+    display : none;
+}

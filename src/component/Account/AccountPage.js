@@ -13,15 +13,16 @@ class AccountPage  extends React.Component{
             userData : [
                 {
                     id : "",
-                    firstname : "blblblbl",
-                    lastname : "",
-                    email : "",
-                    birthDate : "",
-                    sexe : "",
-                    city : "",
-                    phoneNumber : "",
+                    firstname : "Diane",
+                    lastname : "Haye",
+                    email : "heyitsme@mail.fr",
+                    password : "",
+                    birthDate : "17/08/1996",
+                    sexe : "F",
+                    city : "London",
+                    phoneNumber : "a",
                     departureAirport : "",
-                    description : "",
+                    description : "lorem ipsum",
                     avatarPath : "",
                 }
             ]
