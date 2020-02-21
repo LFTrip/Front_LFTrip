@@ -132,14 +132,21 @@ export default class BackConnexion{
             }))
         });
     }
-
-    updateData = (data, uri) =>{        
+    
+    /*
+        faut surtout pas mettre un token ou un id ici sinon c'est la mort 
+    */
+    updateData = (data, uri,id, token) =>{        
         return new Promise((resolve, reject) => { 
             resolve(axios.put(
-                conf["url"]+conf["uri"][uri],
+                conf["url"]+conf["uri"][uri]+"/"+id,  data,
                 {
-                    data
-                }
+                    params: {
+                        'token':  token
+                    },
+                    
+                },
+                
             )
             .then(response=> {
 

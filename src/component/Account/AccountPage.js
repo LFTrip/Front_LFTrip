@@ -50,27 +50,22 @@ class AccountPage  extends React.Component{
 
     saveDataForm = (dataToSave) => {
        //save, change state, call api
-       console.log(dataToSave.firstname)
-       this.setState({
+     /*  this.setState({
            userData : {
-                firstname : dataToSave.firstname,
-                lastname : dataToSave.lastname,
-                email : dataToSave.email,
-                password : dataToSave.password,
-                birthDate : dataToSave.birthDate,
-                city : dataToSave.city,
-                phoneNumber : dataToSave.phoneNumber,
-                description : dataToSave.description
+               ...dataToSave
            }
-       })
-       console.log(this.state.userData.firstname)
+       })*/
+       this.props.backaccess.updateData(dataToSave, 'users',this.state.userData.id, this.state.userData.token ).then(value =>{
+            if(value!== undefined){
+               
+            }
+        })
+
     }
     
     render()
     {
-        console.log(this.state.userData)
         const userAvatarPath = this.state.userData.avatar_path
-        console.log(this.state.userData.firstname)
         return(
             <section id="user-profile">
                 <div className="container">
